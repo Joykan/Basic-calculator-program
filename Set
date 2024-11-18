@@ -1,0 +1,9 @@
+print("Enter integers for the first set, separated by spaces:")
+set1 = set(map(int, input().split()))
+
+print("Enter integers for the second set, separated by spaces:")
+set2 = set(map(int, input().split()))
+
+common_elements = set1 & set2
+
+print(f"The common elements between the two sets are: {common_elements}")
