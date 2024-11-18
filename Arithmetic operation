@@ -1,0 +1,3 @@
+numbers= [9, 15, 24]
+total_sum= sum(numbers)
+print(f"The sum of the integers {numbers} is {total_sum}.")
