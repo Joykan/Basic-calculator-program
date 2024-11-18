@@ -1,0 +1,8 @@
+person_info = {}
+
+person_info["Name"] = input("Enter your name: ")
+person_info["Age"] = int(input("Enter your age: "))
+person_info["Favorite Color"] = input("Enter your favorite color: ")
+
+print("\nHere is the information you provided:")
+print(person_info)
