@@ -1,0 +1,5 @@
+favorite_books = ("CEO", "1984", "The Great ", "Prejudice", "Mock")
+
+print("Here are my favorite books:")
+for book in favorite_books:
+    print(book)
