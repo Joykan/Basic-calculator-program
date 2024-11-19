@@ -1,0 +1,37 @@
+class Vehicle:
+    def move(self):
+        raise NotImplementedError("Subclass must implement abstract method")
+
+
+class Car(Vehicle):
+    def move(self):
+        return "Driving 🚗"
+
+
+class Bike(Vehicle):
+    def move(self):
+        return "Riding a bike 🚴‍♂️"
+
+
+class Plane(Vehicle):
+    def move(self):
+        return "Flying ✈️"
+
+
+def demonstrate_movement(vehicles):
+    for vehicle in vehicles:
+        print(vehicle.move())
+
+
+# Example usage
+if __name__ == "__main__":
+    # Create instances of each vehicle
+    car = Car()
+    bike = Bike()
+    plane = Plane()
+
+    # List of vehicles
+    vehicles = [car, bike, plane]
+
+    # Demonstrate movement
+    demonstrate_movement(vehicles)
