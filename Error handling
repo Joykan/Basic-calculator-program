@@ -1,0 +1,19 @@
+def read_file(filename):
+    try:
+        # Open the file in read mode
+        with open(filename, 'r') as file:
+            content = file.read()
+            print(f"File content:\n{content}")
+
+    except FileNotFoundError:
+        print(f"The file '{filename}' was not found.")
+    except PermissionError:
+        print(f"You don't have permission to read the file '{filename}'.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Request user input
+filename = input("Enter the filename: ")
+
+# Call the read_file function
+read_file(filename)
