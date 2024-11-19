@@ -1,0 +1,46 @@
+class Superhero:
+    def __init__(self, name, superpower, strength_level):
+        self.name = name
+        self.superpower = superpower
+        self.strength_level = strength_level
+
+    def use_superpower(self):
+        return f"{self.name} uses their superpower: {self.superpower}!"
+
+    def fight(self):
+        return f"{self.name} fights with a strength level of {self.strength_level}."
+
+    def __str__(self):
+        return f"Superhero: {self.name}, Superpower: {self.superpower}, Strength Level: {self.strength_level}"
+
+
+class Villain(Superhero):
+    def __init__(self, name, superpower, strength_level, evil_plan):
+        super().__init__(name, superpower, strength_level)
+        self.evil_plan = evil_plan
+
+    def use_superpower(self):
+        return f"{self.name} uses their evil superpower: {self.superpower} for their evil plan!"
+
+    def execute_plan(self):
+        return f"{self.name} is executing their evil plan: {self.evil_plan}."
+
+    def __str__(self):
+        return f"Villain: {self.name}, Superpower: {self.superpower}, Strength Level: {self.strength_level}, Evil Plan: {self.evil_plan}"
+
+
+# Example usage
+if __name__ == "__main__":
+    hero = Superhero("Wonder Woman", "Super Strength", 95)
+    villain = Villain("Joker", "Chaos Manipulation", 85, "Take over Gotham")
+
+    print(hero)
+    print(hero.use_superpower())
+    print(hero.fight())
+
+    print("\n")
+
+    print(villain)
+    print(villain.use_superpower())
+    print(villain.fight())
+    print(villain.execute_plan())
